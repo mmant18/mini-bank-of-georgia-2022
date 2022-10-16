@@ -1,0 +1,62 @@
+<div class="ui segments">
+  <div class="ui segment">
+    <h1>კლიენტის ძებნა</h1>
+  </div>
+  <div class="ui segment">
+   <form class="ui bordered form segment" [formGroup]="searchForm" (ngSubmit)="getClients()">
+     <div class="ui three column grid">
+       <div class="column">
+         <div class="field">
+           <label for="firstName">სახელი</label>
+           <input type="text" id="firstName" formControlName="firstName"/>
+         </div>
+       </div>
+       <div class="column">
+         <div class="field">
+           <label for="lastName">გვარი</label>
+           <input type="text" id="lastName" formControlName="lastName"/>
+         </div>
+       </div>
+       <div class="column">
+         <div class="field">
+           <label for="clientKey">კლიენტის უნიკალური</label>
+           <input type="text" id="clientKey" formControlName="clientKey"/>
+         </div>
+       </div>
+       <div class="column"></div>
+       <div class="column"></div>
+       <div class="column">
+         <button type="submit" class="ui right floated blue icon button" >
+           <i class="search icon"></i>
+         </button>
+       </div>
+     </div>
+   </form>
+  </div>
+
+  <div  *ngIf="searchIsOn">
+    <div class="table-header">
+      <span>კლიენტები</span>
+      <button class="ui icon button" (click)="addClient()">
+        <i class="plus icon"></i>
+      </button>
+    </div>
+    <table>
+      <div *ngIf="!clients.length">ასეთი ინფუთებით კლიენტი არ მოიძებნა</div>
+      <thead  *ngIf="clients.length">
+      <th>სახელი</th>
+      <th>გვარი</th>
+      <th>კლიენტის უნიკალური</th>
+      </thead>
+      <tbody *ngFor="let client of clients">
+        <tr class="client" (click)="moveClient(client)" >
+          <td>{{client.firstName}}</td>
+          <td>{{client.lastName}}</td>
+          <td>{{client.clientKey}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+

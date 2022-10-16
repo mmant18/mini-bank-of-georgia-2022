@@ -1,0 +1,15 @@
+.ui.three.column.grid>.field{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 33.33%;
+}
+
+.client>td{
+  border-right: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  text-align: center;
+}
+
+.client:hover{
+  background-color: #f6f6f6;
+}

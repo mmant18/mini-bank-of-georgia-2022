@@ -1,0 +1,26 @@
+<div class="ui segments">
+  <div class="ui segment">
+    <h1>კლიენტის რეგისტრაცია</h1>
+  </div>
+  <div class="ui segment">
+    <form [formGroup]="registrationForm"  class="ui form" (ngSubmit)="OnSubmitForm()">
+      <div class="ui segment">
+        <div class="fluid field">
+            <label>სახელი</label>
+            <input type="text" formControlName="firstName">
+        </div>
+        <div class="fluid field">
+          <label>გვარი</label>
+          <input type="text" formControlName="lastName">
+        </div>
+        <div class="fluid field">
+          <label>Plus ქულები</label>
+          <input type="number" formControlName="plusPoints" >
+        </div>
+      </div>
+      <button type="submit" class="ui blue icon button">
+        <i class="save icon"></i>
+      </button>
+    </form>
+  </div>
+</div>

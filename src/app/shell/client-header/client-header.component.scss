@@ -1,0 +1,70 @@
+.client{
+  display: flex;
+}
+
+.client-image{
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+.client-general-ingo{
+  display: flex;
+  width: 80%;
+}
+
+.client-info{
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  padding-bottom: 20px;
+}
+
+.client-name{
+  font-weight: bold;
+}
+
+.client-main-info{
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+  margin: 10px;
+}
+
+.client-products-items{
+  display: flex;
+}
+
+.client-products-items-text{
+  flex-direction: column;
+  display: flex;
+  align-items: flex-end;
+  padding-right: 50px;
+  line-height: 35px;
+}
+
+.client-products-items-value{
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  line-height: 35px;
+}
+
+.logout-btn{
+  position: absolute;
+  bottom: 0;
+}
+
+.tab-name{
+  text-align: center;
+
+  color: black;
+}
+
+.active{
+  background-color: #afafaf;
+}
